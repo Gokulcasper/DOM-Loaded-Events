@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Loaded Events</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const Myapp = document.getElementById("app");
+        //   console.log(Myapp);
+        //   Myapp.innerHTML = `<h1>I Changed All</h1>`;
+        const heading = Myapp.children[0];
+        const img = Myapp.children[1];
+        console.log(heading);
+        console.log(img);
+        heading.innerHTML = `<h1>"I Have Changed This Text"</h1>`;
+        console.log(`Image Size: ${img.offsetWidth} , ${img.offsetHeight}`);
+      });
+      //   window.addEventListener("load", () => {
+      //     const Myapp = document.getElementById("app");
+      //     const heading = Myapp.children[0];
+      //     const img = Myapp.children[1];
+      //     heading.innerHTML = `<h1>"I Have Changed This Text"</h1>`;
+      //     console.log(`Image Size: ${img.offsetWidth} , ${img.offsetHeight}`);
+      //   });
+
+      // Opposite
+
+      //window.addEventListener("unload", () => {
+      //});
+
+      // Similar Method
+
+      window.onload = function () {
+        const Myapp = document.getElementById("app");
+        const heading = Myapp.children[0];
+        const img = Myapp.children[1];
+        heading.innerHTML = `<h1>"I Have Changed This Text"</h1>`;
+        console.log(`Image Size: ${img.offsetWidth} , ${img.offsetHeight}`);
+      };
+      //Oppsite
+
+      //window.onunload = function () {
+      //alert("Your Are Unloaded");
+      //}
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Comments -->
+      <h1>Learn HTML DOM in JS</h1>
+      <img
+        src="https://phoneky.co.uk/thumbs/screensavers/down/new/cartoon-anime/love-one-p_t96fu4vS.gif"
+        alt="image"
+      />
+    </div>
+    <!-- <script>
+      const Myapp = document.getElementById("app");
+      //   console.log(Myapp);
+      //   Myapp.innerHTML = `<h1>I Changed All</h1>`;
+      const heading = Myapp.children[0];
+      const img = Myapp.children[1];
+      console.log(heading);
+      console.log(img);
+      heading.innerHTML = `<h1>"I Have Changed This Text"</h1>`;
+      console.log(`Image Size: ${img.offsetWidth} , ${img.offsetHeight}`);
+    </script> -->
+  </body>
+</html>
